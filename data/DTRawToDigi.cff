@@ -1,0 +1,15 @@
+#
+# David Lange, LLNL
+# February 26, 2007
+#
+# Definition of SiStripRawToDigi sequence
+#
+
+#to be true raw to digi sequence -- meanwhile prescaler placeholder
+ module  dtRTDPlaceholder = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
+ replace dtRTDPlaceholder.prescaleFactor = 1
+
+ sequence DTRawToDigi = {dtRTDPlaceholder}
+
+
+

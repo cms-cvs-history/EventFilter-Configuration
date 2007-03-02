@@ -1,0 +1,15 @@
+#
+# David Lange, LLNL
+# February 26, 2007
+#
+# Definition of CSCTFRawToDigi sequence
+#
+
+#to be true raw to digi sequence -- meanwhile prescaler placeholder
+ module  csctfRTDPlaceholder = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
+ replace csctfRTDPlaceholder.prescaleFactor = 1
+
+ sequence csctfRawToDigi = {csctfRTDPlaceholder}
+
+
+
