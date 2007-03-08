@@ -6,10 +6,12 @@
 #
 
 #to be true raw to digi sequence -- meanwhile prescaler placeholder
- module  hcalRTDPlaceholder = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
- replace hcalRTDPlaceholder.prescaleFactor = 1
+module  hcalRTDPlaceholder = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
+replace hcalRTDPlaceholder.prescaleFactor = 1
 
- sequence HcalRawToDigi = {hcalRTDPlaceholder}
+include "EventFilter/Configuration/data/DigiToRaw.cff"
+
+sequence HcalRawToDigi = {DigiToRaw, hcalRTDPlaceholder}
 
 
 

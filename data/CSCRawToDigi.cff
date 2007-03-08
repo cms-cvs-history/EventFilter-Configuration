@@ -9,7 +9,9 @@
  module  cscRTDPlaceholder = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
  replace cscRTDPlaceholder.prescaleFactor = 1
 
- sequence cscRawToDigi = {cscTDPlaceholder}
+include "EventFilter/Configuration/data/DigiToRaw.cff"
+
+sequence CSCRawToDigi = {DigiToRaw, cscRTDPlaceholder}
 
 
 
