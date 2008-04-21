@@ -1,6 +1,0 @@
-block DigiToRawFEVT = {
-    untracked vstring outputCommands = {
-	"keep FEDRawDataCollection_source_*_*",
-	"keep FEDRawDataCollection_rawDataCollector_*_*"
-    }
-}
